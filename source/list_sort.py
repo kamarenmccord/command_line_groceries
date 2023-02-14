@@ -8,18 +8,18 @@
     will return [[],[],[]] type list
 """
 
-def counter(lst, x):
-    count = lst.count(x)
+def counter(entire_list, item):
+    count = entire_list.count(item)  # return a count of items in the list
     return count
 
 
 def lst_builder(lst):
     # remove doubles
     a = []
-    for x in lst:
+    for item in lst:
         if x not in a:
-            a.append(counter(lst, x))
-            a.append(x)
+            a.append(counter(lst, item))
+            a.append(item)
     # put count inside the new matrix
     my_lst = []
     for count, x in enumerate(a,1):
